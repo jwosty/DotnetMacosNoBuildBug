@@ -14,4 +14,4 @@ run() {
 
 run dotnet restore $proj --runtime $rid
 run dotnet build $proj --configuration $cfg --no-restore --runtime $rid --self-contained true
-run dotnet publish $proj --configuration $cfg --no-restore --runtime $rid --self-contained true --output publish/$rid
+run dotnet publish $proj --configuration $cfg --no-restore --no-build --runtime $rid --self-contained true --output publish/$rid
